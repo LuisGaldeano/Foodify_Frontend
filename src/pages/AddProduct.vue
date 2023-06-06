@@ -69,13 +69,13 @@ export default defineComponent({
         (response) => {
           console.log(response.data)
           Notify.create(
-          {
-            color: 'blue',
-            position: 'top',
-            message: response.data,
-          },
-          getProducts()
-        )
+            {
+              color: 'blue',
+              position: 'top',
+              message: response.data,
+            },
+            getProducts()
+          )
         }
       ).catch(() => {
         Notify.create(
@@ -119,7 +119,7 @@ export default defineComponent({
 }
 
 .custom-input {
-   margin: 0px 20px 20px 50px;
+  margin: 0px 20px 20px 50px;
 }
 
 .custom-button-1 {
@@ -131,10 +131,6 @@ export default defineComponent({
   border-radius: 10px;
 }
 
-.custom-title {
-  color: #0e658a;
-  font-weight: bold;
-}
 
 
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md buttons" align="right">
 
-    <q-btn @click="buyProducts()" class="q-mt-lg custom-button-3 float-left">Comprar
+    <q-btn class="q-mt-lg custom-button-3 float-left" to="/ShoppingList">Comprar
       <q-icon right name="attach_money"/>
     </q-btn>
 
@@ -59,7 +59,7 @@ export default defineComponent({
   setup() {
     let fridge = ref([])
     let shopping_list = ref([])
-    let info = ref ([])
+    let info = ref([])
 
     function getFridge() {
       console.log("calling api")
@@ -181,11 +181,6 @@ export default defineComponent({
 
 .custom-table {
   min-height: 350px;
-}
-
-.custom-title {
-  color: #0e658a;
-  font-weight: bold;
 }
 
 .custom-button-3 {

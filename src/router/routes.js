@@ -1,11 +1,19 @@
 const routes = [
   {
     path: '/',
+    component: () => import('pages/LoginPage.vue'),
+  },
+
+  {
+    path: '/Dashboard',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      {path: '', component: () => import('pages/DashboardPage.vue')},
+      {path: '/Dashboard', component: () => import('pages/DashboardPage.vue')},
       {path: '/AddProduct', component: () => import('pages/AddProduct.vue')},
       {path: '/SpendProduct', component: () => import('pages/SpendProduct.vue')},
+      {path: '/Chart', component: () => import('pages/Chart.vue')},
+      {path: '/ShoppingList', component: () => import('pages/ShoppingList.vue')},
+
 
       // Not completed yet
       // {path: '/Taskboard', component: () => import('pages/TaskBoard.vue')},

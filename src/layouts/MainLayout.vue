@@ -1,25 +1,28 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar class = "background-white">
-<!--        class = "background-white"-->
+      <q-toolbar class="background-white">
         <q-btn class="personal-text"
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
+               flat
+               dense
+               round
+               icon="menu"
+               aria-label="Menu"
+               @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title class="personal-text"></q-toolbar-title>
+        <q-toolbar-title class="personal-text">
+
+
+        </q-toolbar-title>
 
         <div class="icon-name">
           Luis Galdeano
         </div>
         <q-avatar>
-            <img src="../img/Icono.jpg" alt="Imagen del usuario">
-          </q-avatar>
+          <img src="../img/Icono.jpg" alt="Imagen del usuario">
+        </q-avatar>
+        <q-btn outline style="color: #0E658A;" label="Salir" class="q-ml-lg" to="/"/>
       </q-toolbar>
     </q-header>
 
@@ -36,28 +39,28 @@
         </q-item-label>
 
         <EssentialLink class="white-text"
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
+                       v-for="link in essentialLinks"
+                       :key="link.title"
+                       v-bind="link"
         />
       </q-list>
     </q-drawer>
     <q-page-container>
-      <router-view />
+      <router-view/>
     </q-page-container>
   </q-layout>
 
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import {defineComponent, ref} from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
     title: 'Dashboard',
     icon: 'ion-md-speedometer',
-    link: '/'
+    link: 'http://localhost:9000/Dashboard'
   },
   {
     title: 'Añadir Producto',
@@ -69,6 +72,11 @@ const linksList = [
     icon: 'ion-md-trash',
     link: 'http://localhost:9000/SpendProduct'
   },
+  {
+    title: 'Lista de la compra',
+    icon: 'ion-md-briefcase',
+    link: 'http://localhost:9000/ShoppingList'
+  },
 
 ]
 
@@ -79,13 +87,13 @@ export default defineComponent({
     EssentialLink
   },
 
-  setup () {
+  setup() {
     const leftDrawerOpen = ref(false)
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer () {
+      toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
       }
     }
@@ -115,7 +123,7 @@ export default defineComponent({
 .icon-name {
   color: #8a8c9b;
   font-size: small;
-  padding-right: 10px ;
+  padding-right: 10px;
 }
 
 </style>

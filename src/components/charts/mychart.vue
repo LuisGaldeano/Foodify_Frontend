@@ -5,10 +5,10 @@
 </template>
 <script>
 export default {
-    name: 'MyChart',
-    data() {
-      return{
-        options: {
+  name: 'MyChart',
+  data() {
+    return {
+      options: {
         chart: {
           id: 'vuechart-example'
         },
@@ -22,7 +22,7 @@ export default {
       }]
     }
   }
-  }
+}
 
 </script>
 
