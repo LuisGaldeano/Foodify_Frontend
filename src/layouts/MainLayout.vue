@@ -22,7 +22,7 @@
         <q-avatar>
           <img src="../img/Icono.jpg" alt="Imagen del usuario">
         </q-avatar>
-        <q-btn outline style="color: #0E658A;" label="Salir" class="q-ml-lg" to="/"/>
+        <q-btn outline style="color: #0E658A;" label="Salir" class="q-ml-lg" to="/Login"/>
       </q-toolbar>
     </q-header>
 
