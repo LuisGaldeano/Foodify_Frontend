@@ -35,7 +35,7 @@
         <q-item-label
           header
         >
-          <q-img src="../img/Foodify_White.png" alt="Foodify Image"/>
+          <q-img src="../img/Foodify_white.png" alt="Foodify Image"/>
         </q-item-label>
 
         <EssentialLink class="white-text"
@@ -60,22 +60,27 @@ const linksList = [
   {
     title: 'Dashboard',
     icon: 'ion-md-speedometer',
-    link: 'http://localhost:9000/Dashboard'
+    link: '/Dashboard'
   },
   {
     title: 'Añadir Producto',
     icon: 'ion-md-cart',
-    link: 'http://localhost:9000/AddProduct'
+    link: '/AddProduct'
   },
   {
     title: 'Gastar Producto',
     icon: 'ion-md-trash',
-    link: 'http://localhost:9000/SpendProduct'
+    link: '/SpendProductTouch'
+  },
+    {
+    title: 'Gastar Producto (Scan)',
+    icon: 'ion-md-trash',
+    link: '/SpendProductScan'
   },
   {
     title: 'Lista de la compra',
     icon: 'ion-md-briefcase',
-    link: 'http://localhost:9000/ShoppingList'
+    link: '/ShoppingList'
   },
 
 ]

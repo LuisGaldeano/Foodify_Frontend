@@ -15,9 +15,11 @@ const routes = [
     children: [
       {path: '/Dashboard', component: () => import('pages/DashboardPage.vue')},
       {path: '/AddProduct', component: () => import('pages/AddProduct.vue')},
-      {path: '/SpendProduct', component: () => import('pages/SpendProduct.vue')},
+      {path: '/SpendProductScan', component: () => import('pages/SpendProductScan.vue')},
       {path: '/Chart', component: () => import('pages/Chart.vue')},
       {path: '/ShoppingList', component: () => import('pages/ShoppingList.vue')},
+      {path: '/SpendProductTouch', component: () => import('pages/SpendProductTouch.vue')},
+
 
 
       // Not completed yet
