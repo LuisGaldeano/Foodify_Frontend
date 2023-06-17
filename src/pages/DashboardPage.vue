@@ -15,7 +15,7 @@
         </div>
       </q-btn>
     </router-link>
-    <router-link to="/SpendProduct">
+    <router-link to="/SpendProductTouch">
       <q-btn push class="q-pa-lg custom-button-2">
         <div class="row items-center no-wrap">
           <div class="text-center">
